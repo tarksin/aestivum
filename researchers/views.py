@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from .models import Researcher
 
-def home(request):
+def researchers(request):
     researchers = Researcher.objects
     # researchers = [{'name':'Anita Churchstone, Ph.D.','organization':'Cold Spring Harbor Laboratory'},
     #                 {'name':'Carl Schmidt, Ph.D.'    ,'organization':'University of California at Davis'},
@@ -10,3 +10,9 @@ def home(request):
     #               ] 
 
     return render(request, 'researchers/home.html', {'researchers':researchers})
+
+
+def researcher(request, researcher_id):
+    researcher = get_object_or_404(Researcher, pk=researcher_id)
+    # blog = {"title":"Really cool article"}
+    return render(request, 'researchers/researcher.html', {'researcher':researcher})    

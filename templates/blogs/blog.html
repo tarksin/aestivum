@@ -53,25 +53,24 @@
             </div>
         </nav>
     </header>
-
-  {% block content %}  
+{% block content %}
     <main role="main">
         <div class="container">
-            <h2 class="text-center pt-3">{{ researcher.first_name }} {{ researcher.last_name }}, {{ researcher.academic_title }}</h2>
-             <h4>{{ researcher.alma_mater }}</h4>   
+                <h3 class="text-center pt-3" style="color:darkblue;">{{ blog.title }}</h3>
             <br />
-            <hr>
-                
-            <h6>{{ researcher.alma_mater}}</h6>
-            <img class="image-fluid" src="{{ researcher.photo_main.url}}" height="100"  alt="">
-            <br />
+                <p>{{ blog.body }}</p>   
+
+                <img class="image-fluid" src="{{ blog.photo_main.url }}" height="400"  alt="">
+                <br />
+                <br />
+
+            <div style="font-size: .8em;">{{ blog.pub_date }}</div>
             <hr />
             <br />
-            
         </div>
 
     </main>
-{% endblock %}
+
     <footer class="text-muted">
         <div class="container">
             <p class="text-center">&copy; maxxima software {% now "Y" %}</p>
@@ -86,6 +85,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+{% endblock %}
 </body>
 
 </html>

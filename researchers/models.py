@@ -24,6 +24,6 @@ class Researcher(models.Model):
     # def __init__(self):
     #     pass
 
-    # def __str__(self):
-    #     return self.first_name + ' ' +  self.last_name + ' ' + self.academic_title
+    def __str__(self):
+        return self.first_name + ' ' +  self.last_name + ' ' + self.academic_title
     

@@ -25,7 +25,7 @@ SECRET_KEY = '6qi5p_up)w8c0j012#lxv3p6z4w&hu+9f-2ey&&=72yx55=#m2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*' ]
 
 
 # Application definition
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'aestivum.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

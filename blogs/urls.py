@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
 
-    path('', views.blogs, name="blogs"),
+    path('blogs', views.blogs, name="blogs"),
     path('<int:blog_id>/', views.blog, name="blog"),
     # path('blogs/', include('blogs.urls')),
 ] 

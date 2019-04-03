@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import Researcher
 
@@ -9,7 +9,7 @@ def researchers(request):
     #                 {'name':'Ahmed Carlotti, Ph.D.'  ,'organization':'Stowers Institute for Medical Research'},
     #               ] 
 
-    return render(request, 'researchers/home.html', {'researchers':researchers})
+    return render(request, 'researchers/researchers.html', {'researchers':researchers})
 
 
 def researcher(request, researcher_id):
